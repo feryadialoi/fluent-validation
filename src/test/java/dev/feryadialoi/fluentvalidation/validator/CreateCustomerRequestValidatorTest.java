@@ -25,11 +25,11 @@ class CreateCustomerRequestValidatorTest {
 
         assertThat(validationResult.isValid()).isFalse();
 
-        assertThat(validationResult.getResultErrors()).hasSize(5)
+        assertThat(validationResult.resultErrors()).hasSize(5)
                 .map(ResultError::getPropertyName)
                 .containsExactlyInAnyOrder("name", "email", "email", "phone", "phone");
 
-        assertThat(validationResult.getResultErrors()).hasSize(5)
+        assertThat(validationResult.resultErrors()).hasSize(5)
                 .map(ResultError::getErrorMessage)
                 .containsExactlyInAnyOrder(
                         "should not empty",

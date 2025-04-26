@@ -28,6 +28,7 @@ public abstract class AbstractValidator<E> {
                 }
             }
         }
-        return new ValidationResult(resultErrors);
+
+        return new ValidationResult(resultErrors.isEmpty(), resultErrors);
     }
 }
